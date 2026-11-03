@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trendy Ruanas · Halloween</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="decoraciones-halloween" aria-hidden="true">
+  <span class="calabaza">🎃</span>
+  <span class="murcielago murcielago-1">🦇</span>
+  <span class="murcielago murcielago-2">🦇</span>
+  <span class="telarana">🕸️</span>
+ <img src="imagenes/fantasma.png" class="fantasma" alt="">
+</div>
+
+  <h1>👻 Colección Exclcusiva Halloween 🎃 </h1>
+  <main id="catalogo"></main>
+  <section id="seccion-carrito">
+  <h2>🛒 Mi carrito</h2>
+  <div id="lista-carrito">
+    <p>Tu carrito está vacío.</p>
+  </div>
+
+  <p id="subtotal-carrito">Subtotal: $0</p>
+
+  <p class="info-envio">
+    🚚 El valor del envío se cotiza según la zona de destino.
+  </p>
+
+  <button id="finalizar-compra" type="button">
+    Finalizar pedido
+  </button>
+</section>
+  <dialog id="ventana-pedido">
+  <form id="formulario-pedido">
+    <h2 id="titulo-producto"></h2>
+    <img id="foto-producto" alt="">
+
+    <label>Talla
+      <select name="talla" required></select>
+    </label>
+
+    <label>Color
+      <select name="color" required></select>
+    </label>
+
+    <label>Cantidad
+      <input name="cantidad" type="number" min="1" value="1" required>
+    </label>
+
+    <button type="button" id="agregar-carrito" class="comprar">
+      Agregar al carrito
+    </button>
+
+    <button type="button" id="cerrar">Cancelar</button>
+  </form>
+</dialog>
+
+<dialog id="ventana-cliente">
+  <form id="formulario-cliente">
+    <h2>Datos para tu pedido</h2>
+
+    <label>Nombre completo
+      <input name="nombre" required>
+    </label>
+
+    <label>Celular
+      <input name="celular" type="tel" required>
+    </label>
+
+    <label>Ciudad
+      <input name="ciudad" required>
+    </label>
+
+    <label>Dirección
+      <input name="direccion" required>
+    </label>
+
+    <label>Notas (opcional)
+      <textarea name="notas"></textarea>
+    </label>
+
+    <button type="submit" class="comprar">
+      Enviar pedido por WhatsApp
+    </button>
+
+    <button type="button" id="cerrar-cliente">Volver</button>
+  </form>
+</dialog>
+
+  <script src="producto.js"></script>
+  <script src="catalogo.js"></script>
+  <script src="pedido.js"></script>
+</body>
+</html>
